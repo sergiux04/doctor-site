@@ -178,20 +178,25 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     transform: translateX(-150%); /* Initial position outside the viewport on the left */
-      animation: slideInFromLeft 1.5s forwards;
+    /* Remove the animation property from here */
 }
 
+/* Add a new class to control the animation */
+.image-container.animate img {
+    transform: translateX(0);
+    animation: slideInFromLeft 1.5s forwards;
+}
 
 @keyframes slideInFromLeft {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     100% {
-      transform: translateX(0); /* Final position, fully visible */
+        transform: translateX(0); /* Final position, fully visible */
     }
-  }
+}
 
-.text-container {
+  .text-container {
     max-width: 90%;
     flex: 1;
     padding: 20px;
@@ -201,26 +206,27 @@ button:hover {
     margin-top: 20px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1.5s ease-out forwards;
-      
+    transform: translateY(20px);
+    /* Remove the animation property from here */
 }
 
-.text-container:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+/* Add a new class to control the animation */
+.text-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 @keyframes fadeInUp {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
   
 
@@ -236,7 +242,7 @@ p {
 
 
 .testimonials-container {
-    margin-top: 20px;
+    margin-top: 20px;   
     width: 100%;
     font-weight: bold;
 }

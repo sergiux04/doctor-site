@@ -60,6 +60,36 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        const textContainer = document.querySelector('.text-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    textContainer.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.8 });
+
+        observer.observe(textContainer);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const imageContainer = document.querySelector('.image-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.8 });
+
+        observer.observe(imageContainer);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
         const testimonials = document.querySelectorAll('.testimonial');
         let index = 0;
 
