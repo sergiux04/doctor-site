@@ -178,23 +178,18 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     transform: translateX(-150%); /* Initial position outside the viewport on the left */
-    /* Remove the animation property from here */
+      animation: slideInFromLeft 1.5s forwards;
 }
 
-/* Add a new class to control the animation */
-.image-container.animate img {
-    transform: translateX(0);
-    animation: slideInFromLeft 1.5s forwards;
-}
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
     100% {
-        transform: translateX(0); /* Final position, fully visible */
+      transform: translateX(0); /* Final position, fully visible */
     }
-}
+  }
 
   .text-container {
     max-width: 90%;
@@ -284,17 +279,33 @@ p {
 
 
 .container-about2 {
-    
     padding: 20px;
     box-sizing: border-box;
     padding-top: 10%;
-    
 }
 
-h1 {
+h1.typing-text {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Cursor blinking animation */
+h1.typing-text::after {
+    content: '|';
+    display: inline-block;
+    animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .statements-container {

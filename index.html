@@ -29,6 +29,34 @@
         
 </div>
 
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const servicesH1 = document.querySelector('.right h2');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(servicesH1);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(servicesH1);
+
+    function startTypingAnimation() {
+        const textToType = servicesH1.textContent.trim();
+        servicesH1.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            servicesH1.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 100); // Adjust typing speed (milliseconds)
+        }
+    }
+});</script>
+
 
 </div>
 
@@ -67,7 +95,7 @@
                     textContainer.classList.add('animate');
                 }
             });
-        }, { threshold: 0.8 });
+        }, { threshold: 0.5 });
 
         observer.observe(textContainer);
     });
@@ -82,7 +110,7 @@
                     imageContainer.classList.add('animate');
                 }
             });
-        }, { threshold: 0.8 });
+        }, { threshold: 0.5 });
 
         observer.observe(imageContainer);
     });
@@ -104,7 +132,7 @@
 
 
 <div class="container-about2">
-    <h1>Why Choose Dr. Shannons</h1>
+    <h1 class="typing-text">Why Choose Dr. Shannons</h1>
 
     <div class="statements-container">
         <div class="statement">
@@ -124,12 +152,57 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const typingText = document.querySelector('.typing-text');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(typingText);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(typingText);
+
+    function startTypingAnimation() {
+        const textToType = typingText.textContent.trim();
+        typingText.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            typingText.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 70); // Adjust typing speed (milliseconds)
+        }
+    }
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const imageContainer = document.querySelector('.image-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    imageContainer.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.8 });
+
+        observer.observe(imageContainer);
+    });
+</script>
+
 <video class="video2" autoplay muted loop>
     <source src="/footag/pattern_-_85590 (Original).mp4" type="video/mp4">
 </video>
 
 <div class="container-services2">
-    <h1>Services</h1>
+    <h1 class="typing-text">Services</h1>
 
     <div class="services-container">
         <div class="services">
@@ -155,6 +228,34 @@
         </div>
     </div>
 </div>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const servicesH1 = document.querySelector('.container-services2 h1.typing-text');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(servicesH1);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(servicesH1);
+
+    function startTypingAnimation() {
+        const textToType = servicesH1.textContent.trim();
+        servicesH1.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            servicesH1.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 70); // Adjust typing speed (milliseconds)
+        }
+    }
+});</script>
 
 <script>
     // Intersection Observer to trigger the fade-in animation
@@ -193,6 +294,35 @@
         ZIP Code
     </address>
 </div>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const servicesH1 = document.querySelector('.container-map h1');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startTypingAnimation();
+                observer.unobserve(servicesH1);
+            }
+        });
+    }, { threshold: 0.8 });
+
+    observer.observe(servicesH1);
+
+    function startTypingAnimation() {
+        const textToType = servicesH1.textContent.trim();
+        servicesH1.textContent = '';
+        typeCharacters(textToType, 0);
+    }
+
+    function typeCharacters(text, index) {
+        if (index < text.length) {
+            servicesH1.textContent += text.charAt(index);
+            index++;
+            setTimeout(() => typeCharacters(text, index), 70); // Adjust typing speed (milliseconds)
+        }
+    }
+});</script>
+
 <div class="container-details3">
     <div class="contact-details3">
         <img class="profile-photo3" src="/footag/pexels-pavel-danilyuk-6812464.jpg" alt="Profile Photo">
