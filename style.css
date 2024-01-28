@@ -192,7 +192,7 @@ button:hover {
   }
 
 .text-container {
-    max-width: 100;
+    max-width: 90%;
     flex: 1;
     padding: 20px;
     background-color: #38B6FF;
@@ -238,6 +238,7 @@ p {
 .testimonials-container {
     margin-top: 20px;
     width: 100%;
+    font-weight: bold;
 }
 
 .testimonial {
@@ -264,6 +265,7 @@ p {
         flex-direction: column;
         align-items: center;
         padding-top: 60%;
+        padding-right: 10%;
     }
 
     .image-container,
