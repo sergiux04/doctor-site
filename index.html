@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<title>Home Page</title>
+	</style>
+</head>
+<body>
+        
+	<video autoplay muted loop>
+		<source src="footag/production_id_4488805 (2160p) (1).mp4" type="video/mp4">
+	</video>
+
+    <div>
+
+        <div class="container">
+            
+            <div class="left"></div>
+            <div class="right"> 
+                <h1>Dr. Keith Shannons</h1>
+                <h2>Doctor of Dental Medicine</h2>
+                <p>Dr. Shannons has over 10 years of experience in dentistry. He is committed to providing personalized care to his clients, and keeping his practice up-to-date with the latest research and technology in the field.</p>
+                <button>Book a Consult</button>
+            </div>
+        </div>
+        
+</div>
+
+
+</div>
+
+<div class="container-about">
+    <div class="image-container">
+        <img src="/footag/pexels-anna-shvets-3845653.jpg" alt="Dentist Photo">
+    </div>
+    <div class="text-container">
+        <h1 style="    font-size: 50px;
+        font-weight: 600;
+        background-image: linear-gradient(to left, #1a0a46, #431f66);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;">Meet Our Dentist</h1>
+        <p>Welcome to our dental practice. Dr. [Dentist Name] is a highly skilled and experienced dentist dedicated to providing the best care for our patients. With a focus on personalized treatments, we strive to make your dental experience comfortable and effective.</p>
+        <div class="testimonials-container">
+            <div class="testimonial active" id="testimonial1">
+                <p>"Dr. [Dentist Name] is truly amazing. The care and attention to detail are exceptional. I highly recommend!"</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial" id="testimonial2">
+                <p>"I've never felt more comfortable at a dentist's office. Dr. [Dentist Name] and the staff are fantastic."</p>
+                <p>- Jane Smith</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const testimonials = document.querySelectorAll('.testimonial');
+        let index = 0;
+
+        setInterval(() => {
+            testimonials[index].classList.remove('active');
+            index = (index + 1) % testimonials.length;
+            testimonials[index].classList.add('active');
+        }, 4000);
+    });
+</script>
+
+
+
+<div class="container-about2">
+    <h1>Why Choose Dr. Shannons</h1>
+
+    <div class="statements-container">
+        <div class="statement">
+            <h2>Expertise</h2>
+            <p>Share what makes your business unique to set you apart from your competition.</p>
+        </div>
+
+        <div class="statement">
+            <h2>Philosophy</h2>
+            <p>Share what makes your business unique to set you apart from your competition.</p>
+        </div>
+
+        <div class="statement">
+            <h2>Technology</h2>
+            <p>Share what makes your business unique to set you apart from your competition.</p>
+        </div>
+    </div>
+</div>
+
+<video class="video2" autoplay muted loop>
+    <source src="/footag/pattern_-_85590 (Original).mp4" type="video/mp4">
+</video>
+
+<div class="container-services2">
+    <h1>Services</h1>
+
+    <div class="services-container">
+        <div class="services">
+            <h2>General and Surgical Dentistry:</h2>
+            <ul>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+            </ul>
+        </div>
+
+        <div class="services">
+            <h2>Cosmetic Dentistry:</h2>
+            <ul>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+                <li>Add as many bullets as needed</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Intersection Observer to trigger the fade-in animation
+    const serviceElements = document.querySelectorAll('.services');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    serviceElements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+
+
+<div class="container-map">
+    <h1>Find Us</h1>
+    <iframe
+        id="map"
+        width="600"
+        height="450"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4194%2C37.7749%2C-122.4193%2C37.7750&amp;layer=mapnik&amp;marker=37.7749%2C-122.4194"
+    ></iframe>
+    <p>Visit our clinic at:</p>
+    <address>
+        Your Clinic Address<br>
+        City, Country<br>
+        ZIP Code
+    </address>
+</div>
+<div class="container-details3">
+    <div class="contact-details3">
+        <img class="profile-photo3" src="/footag/pexels-pavel-danilyuk-6812464.jpg" alt="Profile Photo">
+
+        <h13 style="    font-size: 50px;
+        font-weight: 600;
+        background-image: linear-gradient(to left, #1a0a46, #431f66);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;" >Contact Us</h13>
+        <p3>Feel free to reach out with any inquiries or just to say hello!</p3>
+
+        <div class="social-links3">
+            <a3 href="https://twitter.com/your_twitter" target="_blank"><i3 class="fab fa-twitter"></i3></a3>
+            <a3 href="https://facebook.com/your_facebook" target="_blank"><i3 class="fab fa-facebook"></i3> </a3>
+            <a3 href="https://instagram.com/your_instagram" target="_blank"><i3 class="fab fa-instagram"></i3> </a3>
+        </div>
+
+        <div class="contact-info3">
+            <p3>Email: your_email@example.com</p3>
+            <p3>Phone: +1 (123) 456-7890</p3>
+        </div>
+    </div>
+</div>
+</body>
+</html>

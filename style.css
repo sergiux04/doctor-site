@@ -1,0 +1,651 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-container {
+    background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+h2 {
+   color: #000; 
+}
+
+p {
+   color: #333; 
+}
+
+button {
+   padding: 10px;
+   color: #fff;
+   background-color: #38B6FF
+}
+
+
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+} */
+.container {
+    position: relative;
+    left: -2vh;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    max-height: 900px;
+    max-width: 1000px;
+    height: 100vh;
+    background: url('/footag/pattern_-_85590\ \(Original\).mp4') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0; /* Set initial opacity to 0 */
+      animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+.left {
+    flex: 1;
+    height: 100%;
+    
+}
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 80%;
+    width: 80%;
+    padding: 20px;
+    margin-left: 20px;
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+button {
+    background-color:#38B6FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 60px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    
+}
+
+button:hover {
+    background-color: #005a9e;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        position: relative;
+
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+        max-height: 700px;
+        max-width: 700px;
+        min-width: 20vh;
+        min-height: none;
+        height: 150vh;
+        width: 50vh;;
+        background: url('https://mixkit.co/free-stock-video/a-little-boy-having-treatment-with-the-dentist-13165/') no-repeat center center fixed;
+        background-size: cover;
+        opacity: 0.8;
+        flex-direction: column;
+    }
+}
+  
+
+.container-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 15%;
+    padding-right: 10%;
+}
+
+.image-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transform: translateX(-150%); /* Initial position outside the viewport on the left */
+      animation: slideInFromLeft 1.5s forwards;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0); /* Final position, fully visible */
+    }
+  }
+
+.text-container {
+    max-width: 100;
+    flex: 1;
+    padding: 20px;
+    background-color: #38B6FF;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.text-container:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+
+.testimonials-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.testimonial {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 800px) {
+    .container-about {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60%;
+    }
+
+    .image-container,
+    .text-container {
+        flex: 1;
+        width: 100%;
+        order: 0; /* Reset the order for mobile layout */
+    }
+}
+
+
+.container-about2 {
+    
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 10%;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.statements-container {
+    display: flex;
+    
+    margin-top: 20px;
+}
+
+.statement {
+    flex: 0 0 30%; /* Adjust the width of statements as needed */
+    margin: 0 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(223, 223, 223, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+.statement:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.statement h2 {
+    font-size: 1.5rem;
+    color:#248bc7;
+}
+
+.statement p {
+    font-size: 1.2rem;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 1200px) {
+    .statements-container {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+
+.video2 {
+    position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -1;
+}
+
+.container-services2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-0%);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.services {
+    opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #38B6FF;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.services:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.services h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .services {
+        flex: 0 0 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.container-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#map {
+    width: 80%;
+    height: 60vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+
+@media only screen and (max-width: 768px) {
+    #map {
+        max-width: none;
+}
+    }
+
+
+.container-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-details {
+    flex: 0 0 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.photo {
+    flex: 0 0 50%;
+    overflow: hidden;
+    background: url('your-photo.jpg') center/cover no-repeat;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .container-contact {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        flex: 1;
+    }
+
+    .photo {
+        flex: 1;
+        height: 300px; /* Adjust the height as needed */
+    }
+}
+
+
+
+.container-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-details {
+    flex: 0 0 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.contact-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.photo {
+    flex: 0 0 50%;
+    overflow: hidden;
+    background: url('/footag/pexels-anna-shvets-3845653.jpg') center/cover no-repeat;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .container-contact {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        flex: 1;
+    }
+
+    .photo {
+        flex: 1;
+        height: 300px; /* Adjust the height as needed */
+    }
+}
+
+
+.container-details3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-top:10%;
+    padding-bottom: 10%;
+}
+
+.contact-details3 {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #439fe6;
+    border-radius: 15px;
+    margin-right: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.profile-photo3 {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+h13 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.social-links3 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-links3 a3 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links3 a3:hover {
+    color: #0078d4;
+}
+
+.social-links3 i3 {
+    margin-right: 8px;
+}
+
+.contact-info3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+            flex-direction: column; /* Updated to column for phone size */
+            align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-details3 {
+        flex-direction: column;
+    }
+
+    .contact-details3 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
